@@ -1,0 +1,13 @@
+extends layouts/layout
+
+block content
+  main
+    h2 #{article.name}
+    p #{article.body}
+    if article.path
+      img(src=`${article.path}` alt=`${article.name}`)
+    br
+    br
+    a.btn(
+      href='/'
+    ) Back to all Articles

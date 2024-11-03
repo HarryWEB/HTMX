@@ -1,0 +1,21 @@
+extends layouts/layout
+
+block content
+  main
+    h2 All Articles
+    div.article-list
+      include partials/list
+  footer
+    h2 Add a New Article
+    form#articleForm(
+      enctype="multipart/form-data"
+      hx-encoding="multipart/form-data"
+      hx-post="/articles"
+      hx-target=".article-list"
+      hx-push-url="false"
+      hx-swap="innerHTML"
+    )
+      input(type="text" name="name" placeholder="Article Name" required)
+      textarea(name="body" placeholder="Article Body" required)
+      input(type="file" name="image" accept="image/*" required)
+      button.btn(type="submit") Add Article
