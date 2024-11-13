@@ -1,0 +1,16 @@
+extends layouts/layout
+
+block content
+  main
+    h2 Edit Article
+    form(hx-put=`/article/${article.id}/edit`, hx-target="body")
+      div
+        label(for="name") Name:
+        input(type="text", id="name", name="name", value=article.name)
+      div
+        label(for="body") Content:
+        textarea(id="body", name="body")= article.body
+      div
+        label(for="path") Image path:
+        textarea(id="path", name="path")= article.path
+      button.btn(type="submit") Save Changes

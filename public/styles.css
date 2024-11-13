@@ -4,7 +4,7 @@ body {
   margin: 0;
 }
 h1, h2, h3 {
-  color: #333;
+  color: #0A5B59;
   margin: 0;
 }
 main h2 {
@@ -65,6 +65,7 @@ footer {
 footer h2 {
   margin-bottom: 30px;
   text-align: center;
+  color: #0A5B59;
 }
 form * {
   display: block;
@@ -80,7 +81,7 @@ form textarea {
   height: 100px;
 }
 .btn {
-  background: #ffa300;
+  background: #0A5B59;
   color: white;
   padding: 10px;
   border: 0;

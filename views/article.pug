@@ -5,9 +5,13 @@ block content
     h2 #{article.name}
     p #{article.body}
     if article.path
-      img(src=`${article.path}` alt=`${article.name}`)
+      img(src=`${article.path}` alt=`${article.name}` style="border: 5px solid #555; border-radius: 10px; width:100%")
     br
     br
+    a.btn(
+      href=`/article/${article.id}/edit`
+      style="margin-right: 20px;"
+    ) Edit
     a.btn(
       href='/'
     ) Back to all Articles
